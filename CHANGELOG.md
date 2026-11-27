@@ -2,6 +2,18 @@
 
 Cada versión empieza con un título `## X.Y.Z`; la más reciente va primero.
 
+## 0.2.9
+
+### Errores a la vista
+
+- Las líneas con un error o un aviso se tiñen de su color y llevan al final el mensaje del más grave (con `(+N)` si hay más en esa línea); si no cabe, termina en «…» antes del minimapa.
+- Minimapa: cada error marca su línea con una banda y, en el borde derecho, una regla a escala enseña todos los del archivo aunque el minimapa no llegue a su línea.
+
+### Rutas
+
+- Separadas por puntos: tras `using`, `import`, `from`, `namespace` o `package` (`using Core.Adapters.`), la lista de sugerencias enseña las carpetas (con punto, para seguir dentro) y los archivos sin extensión. No distingue mayúsculas y busca desde la raíz, junto al archivo y desde `src/`. Si no hay nada en el disco (`using System.`), sugiere el servidor de lenguaje.
+- `src=`, `href=`, `url(`, `@import`, `import "…"`, `from "…"` y `require(…)`: su valor cuenta como ruta aunque no lleve barra. `<link href="estilos.css">` o `<script src="app.js">` se ven con el vistazo bajo la línea, y al escribir `href="` ya se sugieren los archivos junto al que se edita.
+
 ## 0.2.8
 
 ### Rutas en la lista de sugerencias
