@@ -2,6 +2,22 @@
 
 Cada versión empieza con un título `## X.Y.Z`; la más reciente va primero.
 
+## 0.2.7
+
+### Vistazo bajo la línea
+
+- Con el ratón (o el cursor de texto, quieto) sobre una ruta, una URL o un símbolo, aparece un panel justo debajo de esa línea con lo que hay detrás, unido al texto por una raya.
+- **Rutas** (`./app/sum.js`, `src/lib.rs:12:5`, `docs/guia.md#L3`, `C:\…`): las primeras líneas del archivo, numeradas, desde la línea indicada y con ella resaltada. Se buscan junto al archivo, desde la raíz del proyecto o tal cual si son absolutas; sin extensión (`import './window'`) se prueban las habituales. Una carpeta enseña lo que tiene.
+- **URLs**: el título, la descripción y los primeros párrafos de la página. Se descarga una vez en segundo plano y se guarda mientras la app está abierta.
+- **Símbolos**: el extracto de su definición (del servidor de lenguaje), con la documentación y los diagnósticos de ese punto debajo.
+- Mientras se escribe no sale; vuelve en cuanto se mueve el cursor.
+
+### Editor flotante
+
+- **Ctrl+F y luego Ctrl+L**: se esconde el resto de la interfaz y queda solo el editor con foco, en una ventana que se arrastra por su cabecera y se redimensiona por la esquina. Ctrl+F, Ctrl+L otra vez vuelve al mosaico.
+- Ctrl+B enseña y esconde el árbol de archivos acoplado a su izquierda, que se mueve con la ventana.
+- En este modo el borde izquierdo del minimapa se arrastra para cambiar su ancho.
+
 ## 0.2.6
 
 ### Cambios sin guardar
