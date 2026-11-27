@@ -2,6 +2,15 @@
 
 Cada versión empieza con un título `## X.Y.Z`; la más reciente va primero.
 
+## 0.2.8
+
+### Rutas en la lista de sugerencias
+
+- Al escribir una ruta (`./`, `../`, `~/`, `C:\` o entre comillas con alguna barra, como `"src/core/`), la lista de sugerencias enseña los archivos y carpetas de esa carpeta, igual que los snippets.
+- Se busca junto al archivo que se edita y desde la raíz del proyecto; `~/` es la carpeta personal.
+- Carpetas primero, con su barra; los archivos llevan la extensión a la derecha y los ocultos van al final. Lo escrito tras la última barra filtra (nombres con `.` y `-` incluidos).
+- Al aceptar una carpeta (Enter o Tab) la lista pasa a lo que tiene dentro; al salir de la ruta se cierra.
+
 ## 0.2.7
 
 ### Vistazo bajo la línea
